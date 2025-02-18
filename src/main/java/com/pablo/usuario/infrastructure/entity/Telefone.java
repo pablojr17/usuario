@@ -1,16 +1,14 @@
 package com.pablo.usuario.infrastructure.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Builder
 @Table(name = "telefone")
 public class Telefone {
     @Id
@@ -19,5 +17,5 @@ public class Telefone {
     @Column(name = "numero", length = 10)
     private String numero;
     @Column(name = "ddd", length = 3)
-    private Long ddd;
+    private String ddd;
 }
